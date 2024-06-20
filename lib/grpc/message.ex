@@ -1,5 +1,5 @@
 defmodule GRPC.Message do
-  use Bitwise, only_operators: true
+  import Bitwise
   @max_message_length 1 <<< (32 - 1)
 
   alias GRPC.RPCError

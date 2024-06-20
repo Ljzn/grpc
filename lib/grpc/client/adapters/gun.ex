@@ -266,7 +266,7 @@ defmodule GRPC.Client.Adapters.Gun do
     end
   end
 
-  @char_2 List.first('2')
+  @char_2 List.first(~c"2")
   def gun_v2?() do
     case :application.get_key(:gun, :vsn) do
       {:ok, [@char_2 | _]} ->
